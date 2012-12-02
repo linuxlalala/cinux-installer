@@ -1,0 +1,21 @@
+# Gambas Form File 3.0
+
+{ Form Form
+  MoveScaled(0,0,41,31)
+  { TextLabel1 TextLabel
+    MoveScaled(5,1,24,4)
+    Text = ("Cinuxinstallwizard 0.0.1")
+  }
+  { TextLabel2 TextLabel
+    MoveScaled(2,8,38,15)
+    Text = ("This software is made by John Tzoneyrakis and released under the terms of the GNU GPL. We aren't liable for any damage caused to your computer as a result of using this software. Also, this software comes with ABSOLUTELY NO WARRANTIES!!!")
+  }
+  { Button1 Button
+    MoveScaled(12,25,16,4)
+    Text = ("Close")
+  }
+  { TextLabel3 TextLabel
+    MoveScaled(7,4,31,3)
+    Text = ("Email:johntzoneyrakis@mycinux.com")
+  }
+}

@@ -1,0 +1,36 @@
+' Gambas class file
+
+' Please note this is a WORK IN PROGRESS! Don't use it if you love your computer!
+' This installer is covered under the GNU LGPL
+' 
+
+Public Sub Wizard1_Close()
+'I am going to split the installer back-end script into several stages. The first stage is included.
+Dim ns As String
+Exec ["gnome-terminal", "-e", "/usr/bin/stage-1", partition.Text, username.Text, password.Text, rootpass.Text]
+Shell "openssl crypt,  password.Text" To ns
+Print ns
+Me.Close
+
+End
+
+Public Sub Form_Open()
+
+End
+
+Public Sub Button2_Click()
+'Call gparted
+
+  Exec ["gparted"]
+
+End
+Public Sub Wizard1_Cancel()
+  
+  Me.Close
+  
+End
+
+
+
+
+

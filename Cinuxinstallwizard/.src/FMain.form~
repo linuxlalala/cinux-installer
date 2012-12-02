@@ -1,0 +1,72 @@
+# Gambas Form File 3.0
+
+{ Form Form
+  MoveScaled(0,0,65,49)
+  { Wizard1 Wizard
+    MoveScaled(0,1,64,47)
+    Count = 6
+    Index = 0
+    Text = ("Install Cinux")
+    { Label1 TextLabel
+      MoveScaled(1,1,62,62)
+      Text = ("Wellcome to Cinux. The environment you are currently using is called a live desktop and runs entirely from RAM. This wizard will assist you in the prodecure of installing Cinux. Get ready to answer some technical questions :). We hope you will enjoy Cinux.\n\nPlease press Next to continue.")
+    }
+    Index = 1
+    Text = ("Step #2")
+    { TextLabel1 TextLabel
+      MoveScaled(1,1,61,11)
+      Text = ("Now, we are ready to continue. Press the buton below to launch Gparted, the partitioning tool. If you do not know how to partition, please press the help button. If you have already partitioned your disk, you can safely skip this step.")
+    }
+    { Button1 Button
+      MoveScaled(13,14,34,4)
+      Text = ("I don't know how to partition!")
+    }
+    { Button2 Button
+      MoveScaled(19,20,21,4)
+      Text = ("Launch Gparted")
+    }
+    Index = 2
+    Text = ("Step #3")
+    { TextLabel2 TextLabel
+      MoveScaled(1,1,61,10)
+      Text = ("Now, we are ready to continue. We hope you have noted the partition you want to install linux. Please enter the partition you want to install linux on the textbox below (partitions should be in /dev/xxx form where xxx is the partition you want to use).")
+    }
+    { partition TextBox
+      MoveScaled(20,17,24,4)
+      Text = ("partition")
+    }
+    Index = 3
+    Text = ("Step #4")
+    { TextLabel3 TextLabel
+      MoveScaled(1,1,61,6)
+      Text = ("Now, we are ready to continue. Please enter an user name and a password for the normal user you will be using.")
+    }
+    { username TextBox
+      MoveScaled(2,10,24,4)
+      Text = ("Username")
+    }
+    { password TextBox
+      MoveScaled(2,16,24,4)
+      Text = ("Password")
+      Password = True
+    }
+    Index = 4
+    Text = ("Step #5")
+    { TextLabel4 TextLabel
+      MoveScaled(1,1,62,9)
+      Text = ("Now, please enter the credentials the root user will use. You will need them for various maintance tasks, such as system adminstration and package management.")
+    }
+    { rootpass TextBox
+      MoveScaled(3,13,24,4)
+      Text = ("Passowrd")
+      Password = True
+    }
+    Index = 5
+    Text = ("Step #6")
+    { TextLabel5 TextLabel
+      MoveScaled(0,0,62,10)
+      Text = ("Now, you are ready to install cinux. If you are in doubt for any choiches of yours, please press previous to go back. If you are ready to install Cinux, press Next. In case you want to cancel, press the cancel button.")
+    }
+    Index = 0
+  }
+}

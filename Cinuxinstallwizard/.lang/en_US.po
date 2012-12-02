@@ -1,0 +1,84 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2002-11-01 04:27+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: .project:1
+msgid "Cinuxinstallwizard"
+msgstr "Cinuxinstallwizard"
+
+#: FMain.form:36
+msgid "I don't know how to partition!"
+msgstr "I don't know how to partition!"
+
+#: FMain.form:20
+msgid "Install Cinux"
+msgstr "Install Cinux"
+
+#: FMain.form:41
+msgid "Launch Gparted"
+msgstr "Launch Gparted"
+
+#: FMain.form:31
+msgid "Now, we are ready to continue. Press the buton below to launch Gparted, the partitioning tool. If you do not know how to partition, please press the help button. If you have already partitioned your disk, you can safely skip this step."
+msgstr "Now, we are ready to continue. Press the buton below to launch Gparted, the partitioning tool. If you do not know how to partition, please press the help button. If you have already partitioned your disk, you can safely skip this step."
+
+#: FMain.form:48
+msgid "Now, we are ready to continue. We hope you have noted the partition you want to install linux. Please enter the partition you want to install linux on the textbox below (partitions should be in /dev/xxx form where xxx is the partition you want to use)."
+msgstr "Now, we are ready to continue. We hope you have noted the partition you want to install linux. Please enter the partition you want to install linux on the textbox below (partitions should be in /dev/xxx form where xxx is the partition you want to use)."
+
+#: FMain.form:53
+msgid "partition"
+msgstr "partition"
+
+#: FMain.form:73
+msgid "Step #10"
+msgstr "Step #10"
+
+#: FMain.form:27
+msgid "Step #2"
+msgstr "Step #2"
+
+#: FMain.form:44
+msgid "Step #3"
+msgstr "Step #3"
+
+#: FMain.form:56
+msgid "Step #4"
+msgstr "Step #4"
+
+#: FMain.form:63
+msgid "Step #5"
+msgstr "Step #5"
+
+#: FMain.form:65
+msgid "Step #6"
+msgstr "Step #6"
+
+#: FMain.form:67
+msgid "Step #7"
+msgstr "Step #7"
+
+#: FMain.form:69
+msgid "Step #8"
+msgstr "Step #8"
+
+#: FMain.form:71
+msgid "Step #9"
+msgstr "Step #9"
+
+#: FMain.form:60
+msgid "TextLabel3"
+msgstr "TextLabel3"
+
+#: FMain.form:24
+msgid "Wellcome to Cinux. The environment you are currently using is called a live desktop and runs entirely from RAM. This wizard will assist you in the prodecure of installing Cinux. Get ready to answer some technical questions :). We hope you will enjoy Cinux.\n\nPlease press Next to continue."
+msgstr "Wellcome to Cinux. The environment you are currently using is called a live desktop and runs entirely from RAM. This wizard will assist you in the prodecure of installing Cinux. Get ready to answer some technical questions :). We hope you will enjoy Cinux.\n\nPlease press Next to continue."
+

@@ -1,0 +1,40 @@
+echo "Cinux installer back-end script"
+echo "WARNING!!!! This script is to be called from the Cinux installer."
+echo "Also, this script, aswell it's frontent comes WITH ABSOLUTELY NO WARRANTY under the terms of GNU GPL."
+echo "Once you have finished reading, please press ENTER."
+read
+DISK="$1"
+USER="$2"
+PASS="$3"
+ROOTPASS="$4"
+echo "=> Umounting Partition..."
+umount $DISK
+echo "=> Creating installation directory..."
+mkdir /mnt/target 
+echo "=> mounting the partition..."
+mount $DISK /mnt/target || echo "An error occured" ; exit 1
+echo "=> Unsquashing the disk image system-i686.sqfs..."
+unsquashfs -da 128 -fr 128 -f -d /mnt/target /mnt/.boot/medium/system-i686.sqfs || echo "An error occured" ; exit 1
+echo "Changing directory to /mnt/target"
+cd /mnt/target
+echo "Writing /etc/fstab"
+echo $DISK "      /            ext3    defaults        1     1" >> /mnt/target/etc/fstab
+echo "proc           /proc        proc    defaults        0     0" >> /mnt/target/etc/fstab
+echo "sysfs          /sys         sysfs   defaults        0     0" >> /mnt/target/etc/fstab
+echo "devpts         /dev/pts     devpts  gid=4,mode=620  0     0" >> /mnt/target/etc/fstab
+echo "tmpfs          /dev/shm     tmpfs   defaults        0     0" >> /mnt/target/etc/fstab
+echo "Mounting kernel filesystems...."
+mount --bind /sys sys || echo "An error occured!!!" ; exit 1
+mount --bind /proc proc || echo "An error occured!!!" ; exit 1
+mount --bind /dev dev || echo "An error occured!!!" ; exit 1
+echo "Installing the GRUB bootloader..."
+chroot . grub-install /dev/sda || echo "An error occured!!!" ; exit 1
+chroot . grub-mkconfig -o /boot/grub/grub.cfg || echo "An error occured!!!" ; exit 1
+echo " Adding Users...."
+chroot . groupadd user
+chroot . useradd -s /bin/bash -g user -m -k /dev/null $USER
+chroot . usermod -p $(openssl passwd $PASS) $USER
+chroot . usermod -p $(openssl passwd $ROOTPASS) root
+echo "installation finished. Rebooting in 10 seconds..."
+sleep 10
+reboot

@@ -1,0 +1,23 @@
+# Gambas Project File 3.0
+# Compiled with Gambas 3.3.3
+Title=Cinuxinstallwizard
+Startup=FMain
+Version=0.0.1
+Component=gb.image
+Component=gb.gtk
+Component=gb.form
+TabSize=2
+Translate=1
+Language=en_US.UTF-8
+ExecPath=/home/john/Cinuxinstallwizard.gambas
+SourcePath=/media/1483-5000
+Maintainer=linuxlalala
+Address=dino_2000@hushmail.com
+Url=linuxlalala.tk
+License=Lesser General Public License
+PackageName=cinuxinstallwizard-0.0.1
+Packager=1
+Systems=autotools
+Menus=ubuntu:"Applications/System/Administration"
+Categories=ubuntu:"System"
+Groups=ubuntu:"admin"
